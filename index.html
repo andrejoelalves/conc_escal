@@ -366,10 +366,10 @@
             '<b>' + '<div ALIGN="CENTER">'
             + '<span style = "font-weight:bold; color:black"</span>'
             + props.Concelho + '</b><br />' + '<div ALIGN="CENTER">'
-			+ '<p span style = "font-weight:normal; color: #000000"</p>Número de casos: '
+			+ '<p span style = "font-weight:normal; color: #000000"</p>Number of cases: '
             + '<span style = "font-weight:bold; color: #c62121"</span>'
             + String(props[globalTimestamp])
-            + '</b><br />' : 'Selecione um município');
+            + '</b><br />' : 'Select a municipality');
 
     };
 
@@ -444,12 +444,12 @@
 
 
             var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0, 2, 50, 150, 500, 2000],
+                 grades = [0, 2, 50, 150, 500, 2000],
                 labels = ['0-2', '3-49', '50-149', '150-499', '500-2000', '> 2000'],
                 from, to;
 
 
-            div.innerHTML = '<FONT SIZE=2 style = "font-family:verdana"><b>Número acumulado de <br> casos confirmados</b><span>  <span class="brsmall"></span> '; // Títulos da legenda
+            div.innerHTML = '<FONT SIZE=2 style = "font-family:verdana"><b>Number of accumulated <br> confirmed cases</b><span>  <span class="brsmall"></span> '; // Títulos da legenda
 
             for (var i = 0; i < grades.length; i++) {
                 div.innerHTML +=
@@ -457,7 +457,7 @@
                     labels[i] + (grades[i + 1] ? '  '
                     + '<br>' : ' <br> <span SIZE=1>' +
                     '<span style = "font-weight:normal; style = "font-family:verdana"; color:black"</span>' +
-                    '<FONT SIZE=1 style = "font-family:verdana">Fonte dos dados: <a href="https://covid19.min-saude.pt/relatorio-de-situacao/" target="_blank">DGS</a>')
+                    '<FONT SIZE=1 style = "font-family:verdana">Data source: <a href="https://covid19.min-saude.pt/relatorio-de-situacao/" target="_blank">DGS</a>')
 					
 					
 
