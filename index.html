@@ -377,11 +377,14 @@
 
     // get color depending on population density value
     function getColor(d) {
-        return 		d > 499 ? '#ff0000' :
-							d > 49 ? '#e59701' :
-								d > 2 ? '#e6e600' :
-									d = 0 ? '#f5f5f5' :
-										'#f5f5f5';
+        return 	d > 2000 ? '#bd0026' :
+						d > 499 ? '#f03b20' :
+							d > 149 ? '#fd8d3c' :
+								d > 49 ? '#fecc5c' :
+									d > 2 ? '#ffffb2' :
+										d = 0 ? '#f5f5f5' :
+											'#f5f5f5';
+					
     }
 //ecebed
     // The function to create the choroplet map
@@ -441,8 +444,8 @@
 
 
             var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0, 2, 50, 500],
-                labels = ['0-2', '3-49', '50-499', '≥ 500'],
+                grades = [0, 2, 50, 150, 500, 2000],
+                labels = ['0-2', '3-49', '50-149', '150-499', '500-2000', '> 2000'],
                 from, to;
 
 
